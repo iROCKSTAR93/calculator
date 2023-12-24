@@ -1,14 +1,11 @@
 const buttonElement=document.getElementsByClassName('btn');
-console.log(buttonElement);
+
 let str=" ";
 const inp=document.querySelector('input');
-console.log(inp);
-console.log(Array.isArray(buttonElement));
+
 
 const arr =Array.from(buttonElement);
 
-console.log(Array.isArray(arr));
-console.log(arr);
 for(let i=0;i<arr.length;i++)
 {
     arr[i].addEventListener('click',(e)=>{
@@ -20,8 +17,8 @@ for(let i=0;i<arr.length;i++)
             str='';
         }
         else if(e.target.innerHTML==='DEL')
-        {
-            str=str.slice(0,str.length-1);
+        {   
+            str=str.toString()?.slice(0,-1);
         }
         else
         {
